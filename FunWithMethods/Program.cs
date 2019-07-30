@@ -17,11 +17,23 @@ namespace FunWithMethods
             Console.WriteLine("Before call: X: {0}, Y: {1}", x, y);
             Console.WriteLine("Answer is: {0}", ans);
             Console.WriteLine("After call: X: {0}, Y: {1}", x, y);
+            string str1 = "Flip";
+            string str2 = "Flop";
+            Console.WriteLine($"Before: {str1}, {str2}");
+            SwapStrings(ref str1, ref str2);
+            Console.WriteLine("After: {0}, {1} ", str1, str2);            
         }
 
         static void Add(int x, int y, out int ans)
         {
             ans = x + y;           
+        }
+
+        public static void SwapStrings(ref string s1, ref string s2)
+        {
+            string tempStr = s1;
+            s1 = s2;
+            s2 = tempStr;
         }
     }
 }
